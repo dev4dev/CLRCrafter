@@ -6,7 +6,6 @@
 //  Copyright © 2016 Alex Antonyuk. All rights reserved.
 //
 
-import Foundation
 import AppKit
 import CLRCrafterFramework
 

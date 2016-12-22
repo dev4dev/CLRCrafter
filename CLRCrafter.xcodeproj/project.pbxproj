@@ -7,22 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632D87BE1E0A5B0200F0F919 /* CLRCrafterFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637EA6AC1E09C2A000A1850F /* CLRCrafterFramework.framework */; };
+		632D87C11E0A605D00F0F919 /* CLRCrafterFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 637EA6AC1E09C2A000A1850F /* CLRCrafterFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C9B6EF1DD1EC5E00B9CFFE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9B6EE1DD1EC5E00B9CFFE /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		632D87BF1E0A5F4B00F0F919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 637EA68B1E09C26C00A1850F;
+			remoteInfo = CLRCrafterFramework;
+		};
+		637EA6AB1E09C2A000A1850F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637EA68C1E09C26C00A1850F;
+			remoteInfo = CLRCrafterFramework;
+		};
+		637EA6AD1E09C2A000A1850F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637EA6951E09C26C00A1850F;
+			remoteInfo = CLRCrafterFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		63C9B6E91DD1EC5E00B9CFFE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 11;
 			files = (
+				632D87C11E0A605D00F0F919 /* CLRCrafterFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CLRCrafterFramework.xcodeproj; path = CLRCrafterFramework/CLRCrafterFramework.xcodeproj; sourceTree = "<group>"; };
 		63C9B6EB1DD1EC5E00B9CFFE /* CLRCrafter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLRCrafter; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C9B6EE1DD1EC5E00B9CFFE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,15 +60,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632D87BE1E0A5B0200F0F919 /* CLRCrafterFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		637EA6A71E09C2A000A1850F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				637EA6AC1E09C2A000A1850F /* CLRCrafterFramework.framework */,
+				637EA6AE1E09C2A000A1850F /* CLRCrafterFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		63C9B6E21DD1EC5E00B9CFFE = {
 			isa = PBXGroup;
 			children = (
+				637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */,
 				63C9B6ED1DD1EC5E00B9CFFE /* CLRCrafter */,
 				63C9B6EC1DD1EC5E00B9CFFE /* Products */,
 			);
@@ -76,6 +115,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				632D87C01E0A5F4B00F0F919 /* PBXTargetDependency */,
 			);
 			name = CLRCrafter;
 			productName = CLRCrafter;
@@ -88,8 +128,8 @@
 		63C9B6E31DD1EC5E00B9CFFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Alex Antonyuk";
 				TargetAttributes = {
 					63C9B6EA1DD1EC5E00B9CFFE = {
@@ -108,12 +148,35 @@
 			mainGroup = 63C9B6E21DD1EC5E00B9CFFE;
 			productRefGroup = 63C9B6EC1DD1EC5E00B9CFFE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 637EA6A71E09C2A000A1850F /* Products */;
+					ProjectRef = 637EA6A61E09C2A000A1850F /* CLRCrafterFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				63C9B6EA1DD1EC5E00B9CFFE /* CLRCrafter */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		637EA6AC1E09C2A000A1850F /* CLRCrafterFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CLRCrafterFramework.framework;
+			remoteRef = 637EA6AB1E09C2A000A1850F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		637EA6AE1E09C2A000A1850F /* CLRCrafterFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CLRCrafterFrameworkTests.xctest;
+			remoteRef = 637EA6AD1E09C2A000A1850F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63C9B6E71DD1EC5E00B9CFFE /* Sources */ = {
@@ -125,6 +188,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		632D87C01E0A5F4B00F0F919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CLRCrafterFramework;
+			targetProxy = 632D87BF1E0A5F4B00F0F919 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		63C9B6F01DD1EC5E00B9CFFE /* Debug */ = {
@@ -145,6 +216,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -193,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -212,12 +285,18 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		63C9B6F31DD1EC5E00B9CFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"@rpath/**",
+					"@loader_path/**",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -226,6 +305,11 @@
 		63C9B6F41DD1EC5E00B9CFFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"@rpath/**",
+					"@loader_path/**",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -250,6 +334,7 @@
 				63C9B6F41DD1EC5E00B9CFFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

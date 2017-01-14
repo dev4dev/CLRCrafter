@@ -56,7 +56,9 @@ public struct ColorsParser {
 		case nameEqualColor
 		case colorEqualName
 
-		static var colorRegExp = try! NSRegularExpression(pattern: "rgba\\((\\d+), (\\d+), (\\d+), (\\d+)\\)", options: [.caseInsensitive])
+		static let numberFormatter = NumberFormatter()
+
+		static var colorRegExp = try! NSRegularExpression(pattern: "rgba\\((\\d+), (\\d+), (\\d+), (\\d+(?:\\.\\d+))\\)", options: [.caseInsensitive])
 
 		static func detect(lines: [String]) -> SourceType? {
 			guard let firstLine = lines.first else { return nil }
@@ -89,14 +91,18 @@ public struct ColorsParser {
 		static func color(from string: String) -> NSColor? {
 			let matches = colorRegExp.matches(in: string, options: [], range: NSMakeRange(0, string.characters.count)).first!
 
-			var components: [CGFloat] = []
+			var rawComponents: [CGFloat] = []
 			for r in (1..<matches.numberOfRanges) {
 				let range = matches.rangeAt(r)
-				let s = string.substring(with: range)
-				components.append(CGFloat(Int(s.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))!) / 255.0)
+				let str = string.substring(with: range).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+				if let value = numberFormatter.number(from: str) {
+					rawComponents.append(CGFloat(value.doubleValue))
+				}
 			}
-			if components.count == 4 {
-				return NSColor(red: components[0], green: components[1], blue: components[2], alpha: components[3])
+			let alpha = rawComponents.removeLast()
+			let components = rawComponents.map { $0 / 255.0 }
+			if components.count == 3 {
+				return NSColor(red: components[0], green: components[1], blue: components[2], alpha: alpha)
 			}
 
 			return nil

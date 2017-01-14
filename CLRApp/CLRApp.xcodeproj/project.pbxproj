@@ -13,6 +13,8 @@
 		6354D4701E0D8EDE00A5124C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6354D46E1E0D8EDE00A5124C /* MainController.swift */; };
 		6354D4711E0D8EDE00A5124C /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6354D46F1E0D8EDE00A5124C /* MainController.xib */; };
 		6354D4731E0D8F8500A5124C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6354D4721E0D8F8500A5124C /* MainMenu.xib */; };
+		637DCEEC1E2A664300DC5EB5 /* NSAlert+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCEEB1E2A664300DC5EB5 /* NSAlert+Additions.swift */; };
+		637DCEEE1E2A68EA00DC5EB5 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCEED1E2A68EA00DC5EB5 /* String+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +24,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6354D44F1E0D8EB100A5124C;
 			remoteInfo = CLRApp;
+		};
+		637DCEE51E2A641E00DC5EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637EA68C1E09C26C00A1850F;
+			remoteInfo = CLRCrafterFramework;
+		};
+		637DCEE71E2A641E00DC5EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 637EA6951E09C26C00A1850F;
+			remoteInfo = CLRCrafterFrameworkTests;
+		};
+		637DCEE91E2A642B00DC5EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 637EA68B1E09C26C00A1850F;
+			remoteInfo = CLRCrafterFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +59,9 @@
 		6354D46E1E0D8EDE00A5124C /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		6354D46F1E0D8EDE00A5124C /* MainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 		6354D4721E0D8F8500A5124C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CLRCrafterFramework.xcodeproj; path = ../CLRCrafterFramework/CLRCrafterFramework.xcodeproj; sourceTree = "<group>"; };
+		637DCEEB1E2A664300DC5EB5 /* NSAlert+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAlert+Additions.swift"; sourceTree = "<group>"; };
+		637DCEED1E2A68EA00DC5EB5 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +85,7 @@
 		6354D4471E0D8EB100A5124C = {
 			isa = PBXGroup;
 			children = (
+				637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */,
 				6354D4521E0D8EB100A5124C /* CLRApp */,
 				6354D4621E0D8EB200A5124C /* CLRAppTests */,
 				6354D4511E0D8EB100A5124C /* Products */,
@@ -83,6 +110,8 @@
 				6354D45A1E0D8EB100A5124C /* Info.plist */,
 				6354D46E1E0D8EDE00A5124C /* MainController.swift */,
 				6354D46F1E0D8EDE00A5124C /* MainController.xib */,
+				637DCEEB1E2A664300DC5EB5 /* NSAlert+Additions.swift */,
+				637DCEED1E2A68EA00DC5EB5 /* String+Additions.swift */,
 			);
 			path = CLRApp;
 			sourceTree = "<group>";
@@ -94,6 +123,15 @@
 				6354D4651E0D8EB200A5124C /* Info.plist */,
 			);
 			path = CLRAppTests;
+			sourceTree = "<group>";
+		};
+		637DCEE11E2A641E00DC5EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				637DCEE61E2A641E00DC5EB5 /* CLRCrafterFramework.framework */,
+				637DCEE81E2A641E00DC5EB5 /* CLRCrafterFrameworkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +148,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				637DCEEA1E2A642B00DC5EB5 /* PBXTargetDependency */,
 			);
 			name = CLRApp;
 			productName = CLRApp;
@@ -166,6 +205,12 @@
 			mainGroup = 6354D4471E0D8EB100A5124C;
 			productRefGroup = 6354D4511E0D8EB100A5124C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 637DCEE11E2A641E00DC5EB5 /* Products */;
+					ProjectRef = 637DCEE01E2A641E00DC5EB5 /* CLRCrafterFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6354D44F1E0D8EB100A5124C /* CLRApp */,
@@ -173,6 +218,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		637DCEE61E2A641E00DC5EB5 /* CLRCrafterFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CLRCrafterFramework.framework;
+			remoteRef = 637DCEE51E2A641E00DC5EB5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		637DCEE81E2A641E00DC5EB5 /* CLRCrafterFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CLRCrafterFrameworkTests.xctest;
+			remoteRef = 637DCEE71E2A641E00DC5EB5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6354D44E1E0D8EB100A5124C /* Resources */ = {
@@ -200,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6354D4701E0D8EDE00A5124C /* MainController.swift in Sources */,
+				637DCEEC1E2A664300DC5EB5 /* NSAlert+Additions.swift in Sources */,
+				637DCEEE1E2A68EA00DC5EB5 /* String+Additions.swift in Sources */,
 				6354D4541E0D8EB100A5124C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +283,11 @@
 			isa = PBXTargetDependency;
 			target = 6354D44F1E0D8EB100A5124C /* CLRApp */;
 			targetProxy = 6354D4601E0D8EB200A5124C /* PBXContainerItemProxy */;
+		};
+		637DCEEA1E2A642B00DC5EB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CLRCrafterFramework;
+			targetProxy = 637DCEE91E2A642B00DC5EB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -388,6 +457,7 @@
 				6354D46A1E0D8EB200A5124C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6354D46B1E0D8EB200A5124C /* Build configuration list for PBXNativeTarget "CLRAppTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +466,7 @@
 				6354D46D1E0D8EB200A5124C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,9 +13,10 @@ public extension NSColorList {
 		self.init(name: name)
 		let keys = colors.keys.sorted()
 		(0..<keys.count).forEach({ index in
-			let name = keys[index]
-			let color = colors[name]
-			insertColor(color!, key: name, at: index)
+			let colorName = keys[index]
+			if let color = colors[colorName] {
+				insertColor(color, key: colorName, at: index)
+			}
 		})
 	}
 }

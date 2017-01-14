@@ -8,12 +8,13 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainController" customModule="CLRApp" customModuleProvider="target">
             <connections>
+                <outlet property="textView" destination="pe3-iX-a58" id="G9Q-kf-RI0"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="CLRApp" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="Colors" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="581" height="383"/>
@@ -21,11 +22,67 @@
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="581" height="383"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-aD-las">
+                        <rect key="frame" x="0.0" y="44" width="581" height="339"/>
+                        <clipView key="contentView" id="n5L-Vc-kHa">
+                            <rect key="frame" x="1" y="1" width="579" height="337"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="pe3-iX-a58">
+                                    <rect key="frame" x="0.0" y="0.0" width="579" height="337"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="579" height="337"/>
+                                    <size key="maxSize" width="586" height="10000000"/>
+                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.014569408260285854" green="0.014568623155355453" blue="0.014569067396223545" alpha="1" colorSpace="calibratedRGB"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="fTo-AZ-BIm">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="WVF-OD-zSO">
+                            <rect key="frame" x="564" y="1" width="16" height="337"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Kid-M5-xz6">
+                        <rect key="frame" x="0.0" y="0.0" width="581" height="44"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Kp-RP-Vka">
+                                <rect key="frame" x="20" y="4" width="70" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0YW-Pk-PhJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onSaveTap:" target="-2" id="quK-Fm-GK9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="KRw-KV-7yg"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Kid-M5-xz6" secondAttribute="trailing" id="1HF-jo-5vf"/>
+                    <constraint firstItem="Kid-M5-xz6" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="3yC-sP-usg"/>
+                    <constraint firstItem="Idz-aD-las" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="5ra-vL-Wf9"/>
+                    <constraint firstItem="Idz-aD-las" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="FTS-Bz-Iad"/>
+                    <constraint firstAttribute="bottom" secondItem="Kid-M5-xz6" secondAttribute="bottom" id="Lrl-xT-rok"/>
+                    <constraint firstItem="Kid-M5-xz6" firstAttribute="top" secondItem="Idz-aD-las" secondAttribute="bottom" id="gsb-lJ-GHI"/>
+                    <constraint firstAttribute="trailing" secondItem="Idz-aD-las" secondAttribute="trailing" id="n2Q-A6-j6J"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="189" y="218"/>
+            <point key="canvasLocation" x="37" y="51"/>
         </window>
     </objects>
 </document>

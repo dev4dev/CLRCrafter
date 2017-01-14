@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637DCEDF1E2A61EE00DC5EB5 /* Colors+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DCEDE1E2A61EE00DC5EB5 /* Colors+Additions.swift */; };
 		637EA6961E09C26C00A1850F /* CLRCrafterFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637EA68C1E09C26C00A1850F /* CLRCrafterFramework.framework */; };
 		637EA69D1E09C26C00A1850F /* CLRCrafterFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 637EA68F1E09C26C00A1850F /* CLRCrafterFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637EA6B11E09C2D700A1850F /* example1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 637EA6B01E09C2D700A1850F /* example1.txt */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		637DCEDE1E2A61EE00DC5EB5 /* Colors+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Additions.swift"; sourceTree = "<group>"; };
 		637EA68C1E09C26C00A1850F /* CLRCrafterFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLRCrafterFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637EA68F1E09C26C00A1850F /* CLRCrafterFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLRCrafterFramework.h; sourceTree = "<group>"; };
 		637EA6901E09C26C00A1850F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				637EA68F1E09C26C00A1850F /* CLRCrafterFramework.h */,
 				637EA6901E09C26C00A1850F /* Info.plist */,
 				637EA6B71E09C3B300A1850F /* ColorParser.swift */,
+				637DCEDE1E2A61EE00DC5EB5 /* Colors+Additions.swift */,
 			);
 			path = CLRCrafterFramework;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637EA6B81E09C3B300A1850F /* ColorParser.swift in Sources */,
+				637DCEDF1E2A61EE00DC5EB5 /* Colors+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

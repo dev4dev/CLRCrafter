@@ -21,13 +21,7 @@ let outputName = (CommandLine.arguments.count == 3) ? CommandLine.arguments[2] :
 if let str = try? String(contentsOfFile: fileName).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) {
 	do {
 		let colors = try ColorsParser.parse(data: str)
-		let list = NSColorList(name: "Converted")
-		let keys = colors.keys.sorted()
-		(0..<keys.count).forEach({ index in
-			let name = keys[index]
-			let color = colors[name]
-			list.insertColor(color!, key: name, at: index)
-		})
+		let list = NSColorList(name: "Converted", colors: colors)
 		list.write(toFile: outputName)
 	} catch (let error as ColorsParser.ParsingError) {
 		print("Eh...Parsing error \(error)")
